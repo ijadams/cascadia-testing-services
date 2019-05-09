@@ -1,0 +1,31 @@
+{
+  "name": "promio-landing-page-boilerplate",
+  "version": "1.0.0",
+  "description": "Boilerplate to facilate rapid preparation of landing pages for Promio",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Ray Gesualdo <ray@promio.com>",
+  "license": "MIT",
+  "dependencies": {
+    "browser-sync": "^2.12.12",
+    "del": "^2.2.0",
+    "dotenv": "^2.0.0",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.0",
+    "gulp-cdnify": "git://github.com/raygesualdo/gulp-cdnify.git#issue-12",
+    "gulp-clean-css": "^2.0.10",
+    "gulp-concat": "^2.6.0",
+    "gulp-imagemin": "^3.0.1",
+    "gulp-notify": "^2.2.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-replace-task": "^0.11.0",
+    "gulp-s3-upload": "^1.6.0",
+    "gulp-sass": "^2.3.1",
+    "gulp-sourcemaps": "^1.6.0",
+    "gulp-uglify": "^1.5.3",
+    "gulp-zip": "^4.0.0",
+    "run-sequence": "^1.2.1"
+  }
+}
