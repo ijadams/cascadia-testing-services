@@ -87,6 +87,8 @@ p
   color: white
   margin: 0
   overflow: hidden
+  webkit-clip-path: polygon(0 0%, 100% 0, 100% 100%, 0% 85%)
+  clip-path: url(#poly)
   h2.title
     color: #37ffba
     font-size: 2.5em
@@ -105,7 +107,8 @@ p
   min-height: 100%
   background: #000
   z-index: -1
-  // background-size: cover
+  webkit-clip-path: polygon(0 0%, 100% 0, 100% 100%, 0% 85%)
+  clip-path: url(#poly)
   opacity: 1
   overflow: hidden
 
@@ -201,7 +204,10 @@ select option:first-child
 @media screen and (min-width: 2000px)
     video#video-bg 
         display: none
-
+    .jumbotron 
+        webkit-clip-path: none
+        clip-path: none
+        
 @media screen and (max-width: 1200px)
     video#video-bg 
         width: 150%
@@ -213,10 +219,13 @@ select option:first-child
 @media screen and (max-width: 768px)
     .jumbotron 
         min-height: 100vh !important
+        webkit-clip-path: none
+        clip-path: none
     video#video-bg 
         display: none !important
     h2 
         font-size: 20px
+        
 
 
 \:-moz-placeholder
