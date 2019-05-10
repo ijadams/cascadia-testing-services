@@ -26,13 +26,13 @@ gulp.task('clean', () => {
   ]);
 });
 
-// Process SCSS files for development
+// Process sass files for development
 //   - autoprefix
 //   - create sourcemaps
 //   - pipe to Browsersync
 gulp.task('sass:dev', () => {
   return gulp
-    .src('scss/styles.scss')
+    .src('sass/styles.sass')
     .pipe(sourcemaps.init())
     .on('error', notifyError('Error running sass task [sourcemaps]'))
     .pipe(sass({outputStyle: 'expanded'}))
@@ -46,12 +46,12 @@ gulp.task('sass:dev', () => {
     .pipe(browserSync.stream());
 });
 
-// Process SCSS files for production
+// Process sass files for production
 //   - autoprefix
 //   - minify
 gulp.task('sass:prod', () => {
   return gulp
-    .src('scss/styles.scss')
+    .src('sass/styles.sass')
     .pipe(sass())
     .on('error', notifyError('Error running sass task [sass]'))
     .pipe(autoprefixer({browsers: ['> 1%', 'last 2 versions'], cascade: false}))
@@ -178,7 +178,7 @@ gulp.task('browser-sync', () => {
     }
   });
 
-  gulp.watch(['scss/*.scss', 'scss/**/*.scss'], ['sass:dev']);
+  gulp.watch(['sass/*.sass', 'sass/**/*.sass'], ['sass:dev']);
   gulp.watch('js/vendor/*.js', ['vendorscripts']);
   gulp.watch('js/scripts.js', ['js:dev']);
   gulp.watch('images/*', ['images']);
